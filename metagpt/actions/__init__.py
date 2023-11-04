@@ -29,6 +29,7 @@ from metagpt.actions.write_prd import WritePRD
 from metagpt.actions.write_cpp_prd import WriteCppPRD
 from metagpt.actions.write_prd_review import WritePRDReview
 from metagpt.actions.write_test import WriteTest
+from metagpt.actions.research import CollectLinks, ConductResearch, WebBrowseAndSummarize
 
 class ActionType(Enum):
     """All types of Actions, used for indexing."""

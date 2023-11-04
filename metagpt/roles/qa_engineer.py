@@ -32,15 +32,8 @@ class QaEngineer(Role):
         test_round_allowed=5,
     ):
         super().__init__(name, profile, goal, constraints)
-<<<<<<< HEAD
         self._init_actions([WriteTest]) # FIXME: a bit hack here, only init one action to circumvent _think() logic, will overwrite _think() in future updates
         self._watch([ WriteCppCode, WriteTest, RunCode, DebugError ])
-=======
-        self._init_actions(
-            [WriteTest]
-        )  # FIXME: a bit hack here, only init one action to circumvent _think() logic, will overwrite _think() in future updates
-        self._watch([WriteCode, WriteTest, RunCode, DebugError])
->>>>>>> 36e090695f5cc0f56ffff3882445b1e76583e09e
         self.test_round = 0
         self.test_round_allowed = test_round_allowed
 
@@ -98,16 +91,8 @@ class QaEngineer(Role):
                 "command": command,
             }
             msg = Message(
-<<<<<<< HEAD
                 content=str(file_info), role=self.profile, cause_by=WriteCppTest,
                 sent_from=self.profile, send_to=self.profile
-=======
-                content=str(file_info),
-                role=self.profile,
-                cause_by=WriteTest,
-                sent_from=self.profile,
-                send_to=self.profile,
->>>>>>> 36e090695f5cc0f56ffff3882445b1e76583e09e
             )
             self._publish_message(msg)
 
